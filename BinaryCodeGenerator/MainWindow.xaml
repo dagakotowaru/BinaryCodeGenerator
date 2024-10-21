@@ -1,0 +1,43 @@
+﻿<Window x:Class="BinaryErrorDetection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Обнаружение ошибок" Height="550" Width="400">
+    <Grid>
+        <Label Content="Обнаружение ошибок в каналах передачи данных" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" Margin="10"/>
+        <Label Content="Вариант 5. Контроль на нечет." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,40,0,0"/>
+
+        <!-- поля для кодов и контрольных разрядов -->
+        <TextBox Name="Code1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,80,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,80,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,120,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity2" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,120,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,160,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity3" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,160,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,200,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity4" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,200,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,240,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity5" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,240,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,280,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity6" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,280,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,320,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity7" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,320,20,0" IsReadOnly="True"/>
+
+        <TextBox Name="Code8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,360,0,0" IsReadOnly="True"/>
+        <TextBox Name="Parity8" HorizontalAlignment="Right" VerticalAlignment="Top" Width="30" Height="30" Margin="0,360,20,0" IsReadOnly="True"/>
+
+        <!-- поле для контрольной кодовой комбинации -->
+        <Label Content="Контрольная комбинация:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,400,0,0"/>
+        <TextBox Name="ControlCode" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Margin="20,430,0,0" IsReadOnly="True"/>
+
+        <!-- кнопки -->
+        <Button Content="Генерация кодов" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="150" Height="30" Margin="20,0,0,20" Click="GenerateCodes"/>
+        <Button Content="Генерация контрольных разрядов" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="30" Margin="0,0,20,20" Click="GenerateParities"/>
+        <Button Content="Выход" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Margin="0,0,0,20" Click="ExitApp"/>
+    </Grid>
+</Window>
